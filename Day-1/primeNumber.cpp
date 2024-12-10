@@ -1,14 +1,22 @@
 #include<iostream>
+#include<stdlib.h>
 using namespace std;
 int main(){
-    int num;
+    int num,i=0;
     cout<<"Enter the number:";
     cin>>num;
-    for(int i=2;i<num-1;i++){
+
+    if(num==1){
+        cout<<"It is not a prime number";
+    }
+
+    for(i=2;i<num;i++){
         if(num%i==0){
             cout<<"It is not a prime number";
-            break;
+            exit(0);
         }
     }
+        cout<<"It is a prime number";
+
     return 0;
 }
